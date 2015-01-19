@@ -2,7 +2,14 @@ public class CodeWord {
     
     private final int[] Code;
     
-    public CodeWord(int n){   //Randomly generates a codeword of length n
+    public CodeWord(String codeword) {
+        int n = codeword.length();
+        Code = new int[n];
+        
+        
+    }
+    
+    public CodeWord(int n) {   //Randomly generates a codeword of length n
         Code = new int[n];
         for(int i=0; i < Code.length; i++) {
             if (Math.random() < .5) Code[i] = 1;
