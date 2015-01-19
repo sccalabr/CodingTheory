@@ -36,9 +36,8 @@ public class CodeWord {
     
     public int weight() {              //Gives the weight of a codeword
         int n = 0;
-        for(int i = 0; i < Code.length; i++) {
+        for(int i = 0; i < Code.length; i++)
             n += Code[i];
-        }
         return n;
     }
     
