@@ -2,11 +2,15 @@ public class CodeWord {
     
     private final int[] Code;
     
-    public CodeWord(String codeword) {
+    public CodeWord(int[] codeword) {
+        Code = codeword;
+    }
+    
+    public CodeWord(String codeword) {  //Converts string into a codeword
         int n = codeword.length();
         Code = new int[n];
         for(int i = 0; i < n; i++) {
-            if (!Character.isDigit(codeword.charAt(i))) {
+            if (!Character.isDigit(codeword.charAt(i))) {     //Want to modify so that it only accepts 1 or 0
                 System.out.println("Contains an invalid digit");
                 break;
             }
