@@ -5,8 +5,13 @@ public class CodeWord {
     public CodeWord(String codeword) {
         int n = codeword.length();
         Code = new int[n];
-        
-        
+        for(int i = 0; i < n; i++) {
+            if (!Character.isDigit(codeword.charAt(i))) {
+                System.out.println("Contains an invalid digit");
+                break;
+            }
+            Code[i] = Integer.parseInt(String.valueOf(codeword.charAt(i)));
+        }
     }
     
     public CodeWord(int n) {   //Randomly generates a codeword of length n
